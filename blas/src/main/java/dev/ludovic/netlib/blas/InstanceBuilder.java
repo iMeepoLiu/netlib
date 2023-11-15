@@ -67,14 +67,14 @@ final class InstanceBuilder {
     if (major >= 16) {
       try {
         log.finest("trying to return java 16 instance");
-        return VectorBLAS.getInstance();
+        return Java8BLAS.getInstance();
       } catch (Throwable t) {
-        log.warning("Failed to load implementation from:" + VectorBLAS.class.getName());
+        log.warning("Failed to load implementation from:" + Java8BLAS.class.getName());
       }
     }
     if (major >= 11) {
       log.finest("return java 11 instance");
-      return Java11BLAS.getInstance();
+      return Java8BLAS.getInstance();
     } else {
       log.finest("return java 8 instance");
       return Java8BLAS.getInstance();

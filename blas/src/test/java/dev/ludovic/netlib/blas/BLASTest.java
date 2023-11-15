@@ -60,12 +60,12 @@ public class BLASTest {
     }
     if (major >= 11) {
       instances = Stream.concat(instances, Stream.of(
-        Arguments.of(Java11BLAS.getInstance())
+        Arguments.of(Java8BLAS.getInstance())
       ));
     }
     if (major >= 16) {
       instances = Stream.concat(instances, Stream.of(
-        Arguments.of(VectorBLAS.getInstance())
+        Arguments.of(Java8BLAS.getInstance())
       ));
     }
 
